@@ -9,12 +9,13 @@ export default function App() {
   const [selectedDates, setSelectedDates] = useState({});
 
   useEffect(() => {
+    
     fetchTasks();
   }, []);
 
   const fetchTasks = () => {
     axios.get("http://localhost:3001/task").then((res) => {
-      setTasks(res.data);
+      setTask(res.data);
     });
   };
 
