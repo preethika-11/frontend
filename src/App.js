@@ -15,7 +15,7 @@ export default function App() {
 
   const fetchTasks = () => {
     axios.get("http://localhost:3001/task").then((res) => {
-      setTask(res.data);
+      setTasks(res.data);
     });
   };
 
